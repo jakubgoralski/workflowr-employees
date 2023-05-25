@@ -2,17 +2,17 @@
 
 namespace WorkflowR.Employees.Domain.Managing
 {
-    public class Email : ValueObject
+    public record Email(string Value) : ValueObject
     {
-        private readonly string _email;
-        public string Value { get { return _email; } }
-
-        public Email(string email)
+        public static Email Create(string email)
         {
             if (!EmailAddressValidatorService.IsValidEmail(email))
                 throw new ArgumentException("Email address is wrong.");
 
-            _email = email;
+            return new Email(email);
         }
+
+        public override string ToString()
+            => $"{Value}";
     }
 }

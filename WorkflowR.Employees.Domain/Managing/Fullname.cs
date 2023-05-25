@@ -1,19 +1,21 @@
-﻿using WorkflowR.Employees.Domain.Abstractions;
+﻿using System.Diagnostics.Metrics;
+using WorkflowR.Employees.Domain.Abstractions;
 
 namespace WorkflowR.Employees.Domain.Managing
 {
-    public class Fullname : ValueObject
+    public record Fullname(string FirstName, string LastName) : ValueObject
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-
-        public Fullname(string firstName, string lastName)
+        public static Fullname Create(string fullname)
         {
-            if (String.IsNullOrWhiteSpace(firstName) || String.IsNullOrWhiteSpace(lastName))
+            var splitFullName = fullname.Split(' ');
+
+            if (String.IsNullOrWhiteSpace(splitFullName.First()) || String.IsNullOrWhiteSpace(splitFullName.Last()))
                 throw new ArgumentException("Firstname and lastname cannot be empty");
 
-            FirstName = firstName;
-            LastName = lastName;
+            return new Fullname(splitFullName.First(), splitFullName.Last());
         }
+
+        public override string ToString()
+            => $"{FirstName} {LastName}";
     }
 }

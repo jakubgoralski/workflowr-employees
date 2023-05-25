@@ -2,10 +2,8 @@
 {
     public interface IEmployeeRepository
     {
-        void Create(Employee employee);
-        Employee Read(Guid id);
-        string GetEmailOf(Guid id);
-        void Update(Employee employee);
-        void Delete(Guid id);
+        Task CreateAsync(Employee employee);
+        Task UpdateAsync(Employee employee);
+        Task DeleteAsync(Guid id);
     }
 }
