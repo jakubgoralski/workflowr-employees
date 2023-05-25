@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WorkflowR.Employees.Domain\WorkflowR.Employees.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
