@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowR.Employees.Applica
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowR.Employees.Domain", "WorkflowR.Employees.Domain\WorkflowR.Employees.Domain.csproj", "{48289F66-97DF-46BC-980B-624BAE553542}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowR.Employees.Presentation", "WorkflowR.Employees.Presentation\WorkflowR.Employees.Presentation.csproj", "{B22E61D8-1B57-4C4D-BB69-C7580CFA44A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowR.Employees.Presentation", "WorkflowR.Employees.Presentation\WorkflowR.Employees.Presentation.csproj", "{B22E61D8-1B57-4C4D-BB69-C7580CFA44A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

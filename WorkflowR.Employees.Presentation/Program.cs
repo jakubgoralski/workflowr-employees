@@ -2,6 +2,7 @@ using WorkflowR.Employees.Domain.Managing;
 using WorkflowR.Employees.Infrastructure.EF.ReadModels;
 using WorkflowR.Employees.Infrastructure.EF.Repositories.Interfaces;
 using WorkflowR.Employees.Infrastructure.IoC;
+using WorkflowR.Employees.Presentation.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddPresentation();
+builder.Services.AddGrpc();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -18,6 +21,8 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+app.MapGrpcService<EmployeesService>();
 
 app.MapGet("/employee", (Guid id, IEmployeeReadRepository _repository) =>
 {
