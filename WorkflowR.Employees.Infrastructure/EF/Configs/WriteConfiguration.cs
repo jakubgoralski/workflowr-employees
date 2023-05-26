@@ -22,7 +22,7 @@ namespace WorkflowR.Workflows.Infrastructure.EF.Configs
                 .HasConversion(fullnameConverter)
                 .HasColumnName("Name");
             builder.Property(typeof(Email), "EmailAddress")
-                .HasConversion(fullnameConverter)
+                .HasConversion(emailConverter)
                 .HasColumnName("EmailAddress");
             builder.Property(typeof(Guid), "ManagerId")
                 .HasColumnName("ManagerId");

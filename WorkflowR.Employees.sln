@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowR.Employees.Infrastructure", "WorkflowR.Employees.Infrastructure\WorkflowR.Employees.Infrastructure.csproj", "{8CFA4662-1E89-40E0-A063-E00238829715}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowR.Employees.Infrastructure", "WorkflowR.Employees.Infrastructure\WorkflowR.Employees.Infrastructure.csproj", "{8CFA4662-1E89-40E0-A063-E00238829715}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowR.Employees.Application", "WorkflowR.Employees.Application\WorkflowR.Employees.Application.csproj", "{B5A304C3-F6CC-4ECD-9A71-21092451A44E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowR.Employees.Application", "WorkflowR.Employees.Application\WorkflowR.Employees.Application.csproj", "{B5A304C3-F6CC-4ECD-9A71-21092451A44E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowR.Employees.Domain", "WorkflowR.Employees.Domain\WorkflowR.Employees.Domain.csproj", "{48289F66-97DF-46BC-980B-624BAE553542}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowR.Employees.Domain", "WorkflowR.Employees.Domain\WorkflowR.Employees.Domain.csproj", "{48289F66-97DF-46BC-980B-624BAE553542}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowR.Employees.Presentation", "WorkflowR.Employees.Presentation\WorkflowR.Employees.Presentation.csproj", "{956AF760-2B45-494E-93C6-B570F3D97893}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowR.Employees.Presentation", "WorkflowR.Employees.Presentation\WorkflowR.Employees.Presentation.csproj", "{B22E61D8-1B57-4C4D-BB69-C7580CFA44A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{48289F66-97DF-46BC-980B-624BAE553542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48289F66-97DF-46BC-980B-624BAE553542}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48289F66-97DF-46BC-980B-624BAE553542}.Release|Any CPU.Build.0 = Release|Any CPU
-		{956AF760-2B45-494E-93C6-B570F3D97893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{956AF760-2B45-494E-93C6-B570F3D97893}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{956AF760-2B45-494E-93C6-B570F3D97893}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{956AF760-2B45-494E-93C6-B570F3D97893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B22E61D8-1B57-4C4D-BB69-C7580CFA44A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22E61D8-1B57-4C4D-BB69-C7580CFA44A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B22E61D8-1B57-4C4D-BB69-C7580CFA44A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B22E61D8-1B57-4C4D-BB69-C7580CFA44A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

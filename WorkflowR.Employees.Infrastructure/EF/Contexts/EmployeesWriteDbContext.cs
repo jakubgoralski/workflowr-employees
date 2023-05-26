@@ -19,7 +19,7 @@ namespace WorkflowR.Employees.Infrastructure.EF.Contexts
             modelBuilder.HasDefaultSchema("employees");
 
             var configuration = new WriteConfiguration();
-            modelBuilder.ApplyConfiguration(configuration);
+            modelBuilder.ApplyConfiguration<Employee>(configuration);
         }
     }
 }
