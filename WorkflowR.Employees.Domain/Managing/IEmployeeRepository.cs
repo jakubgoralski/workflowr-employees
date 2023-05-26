@@ -2,7 +2,7 @@
 {
     public interface IEmployeeRepository
     {
-        Task CreateAsync(Employee employee);
+        void Create(Employee employee);
         Task UpdateAsync(Employee employee);
         Task DeleteAsync(Guid id);
     }

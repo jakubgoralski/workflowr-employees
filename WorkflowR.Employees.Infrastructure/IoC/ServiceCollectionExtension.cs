@@ -1,9 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Runtime.CompilerServices;
 using WorkflowR.Employees.Infrastructure.EF.Contexts;
 using WorkflowR.Employees.Infrastructure.Options;
-using Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal;
 using WorkflowR.Employees.Domain.Managing;
 using WorkflowR.Employees.Infrastructure.EF.Repositories.Interfaces;
 using WorkflowR.Workflows.Infrastructure.EF.Repositories;

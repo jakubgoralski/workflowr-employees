@@ -7,13 +7,13 @@ namespace WorkflowR.Employees.Domain.Managing
         public Guid Id { get; set; }
         private Fullname Name { get; set; }
         private Email EmailAddress { get; set; }
-        private Guid? ManagerId { get; set; }
+        private Guid ManagerId { get; set; }
 
-        public Employee(Guid id, string firstName, string lastName, string email, Guid? managerId = null)
+        public Employee(Guid id, Fullname name, Email emailAddress, Guid managerId)
         {
             Id = id;
-            Name = new Fullname(firstName, lastName);
-            EmailAddress = new Email(email);
+            Name = name;
+            EmailAddress = emailAddress;
             ManagerId = managerId;
         }
     }

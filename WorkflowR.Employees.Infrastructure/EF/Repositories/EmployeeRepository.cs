@@ -13,10 +13,10 @@ namespace WorkflowR.Workflows.Infrastructure.EF.Repositories
             _employeeDbContext = workflowsDbContext;
         }
 
-        public async Task CreateAsync(Employee employee)
+        public void Create(Employee employee)
         {
-            await _employeeDbContext.Employees.AddAsync(employee);
-            await _employeeDbContext.SaveChangesAsync();
+            _employeeDbContext.Employees.Add(employee);
+            _employeeDbContext.SaveChanges();
         }
 
         public async Task UpdateAsync(Employee employee)
