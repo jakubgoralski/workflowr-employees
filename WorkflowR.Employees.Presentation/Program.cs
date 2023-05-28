@@ -2,22 +2,16 @@ using WorkflowR.Employees.Domain.Managing;
 using WorkflowR.Employees.Infrastructure.EF.ReadModels;
 using WorkflowR.Employees.Infrastructure.EF.Repositories.Interfaces;
 using WorkflowR.Employees.Infrastructure.IoC;
+using WorkflowR.Employees.Presentation.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorPages();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddPresentation();
-var app = builder.Build();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddGrpc();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
+var app = builder.Build();
 
 app.MapGet("/employee", (Guid id, IEmployeeReadRepository _repository) =>
 {
@@ -53,9 +47,6 @@ app.MapDelete("/employee", async (Guid id, IEmployeeRepository _repository) =>
 })
 .WithName("DeleteEmployee");
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
+app.MapGrpcService<EmployeesService>();
 
 app.Run();
