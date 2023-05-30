@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using WorkflowR.Employees.Domain.Managing;
 using WorkflowR.Employees.Infrastructure.EF.ReadModels;
 using WorkflowR.Employees.Infrastructure.EF.Repositories.Interfaces;
@@ -6,10 +7,19 @@ using WorkflowR.Employees.Presentation.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.ConfigureKestrel(options =>
+{
+    // For REST
+    options.ListenAnyIP(80, o => o.Protocols = HttpProtocols.Http1AndHttp2);
+    // For gRPC
+    options.ListenAnyIP(81, o => o.Protocols = HttpProtocols.Http2);
+});
+
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddPresentation();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddGrpc();
+
 
 var app = builder.Build();
 

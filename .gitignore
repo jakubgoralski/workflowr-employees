@@ -186,6 +186,3 @@ Icon?
 
 # Visual Studio temp something
 .vs/
-
-# Passwords
-**/appsettings.json
