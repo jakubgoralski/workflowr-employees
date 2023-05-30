@@ -23,8 +23,8 @@ namespace WorkflowR.Employees.Infrastructure.IoC
             {
                 x.UseSqlServer(connectionStringOption);
             });
-            services.AddTransient<IEmployeeRepository, EmployeeRepository>();
-            services.AddTransient<IEmployeeReadRepository, EmployeeReadRepository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IEmployeeReadRepository, EmployeeReadRepository>();
 
             return services;
         }
