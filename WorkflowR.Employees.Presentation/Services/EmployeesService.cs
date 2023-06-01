@@ -24,5 +24,17 @@ namespace WorkflowR.Employees.Presentation.Services
                 Email = employee.EmailAddress
             });
         }
+
+        public override Task<GetEmailReply> GetManagersEmail(GetEmailRequest request, ServerCallContext context)
+        {
+            Guid id = Guid.Parse(request.Id);
+            EmployeeReadModel employee = _employeeReadRepository.ReadAsync(id);
+            EmployeeReadModel manager = _employeeReadRepository.ReadAsync(employee.ManagerId);
+
+            return Task.FromResult(new GetEmailReply
+            {
+                Email = manager.EmailAddress
+            });
+        }
     }
 }
