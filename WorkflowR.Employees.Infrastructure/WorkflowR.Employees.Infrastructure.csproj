@@ -16,5 +16,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WorkflowR.Employees.Domain\WorkflowR.Employees.Domain.csproj" />
+  </ItemGroup>
   
 </Project>
