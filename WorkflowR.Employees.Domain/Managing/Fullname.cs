@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-using WorkflowR.Employees.Domain.Abstractions;
+﻿using WorkflowR.Employees.Domain.Abstractions;
 
 namespace WorkflowR.Employees.Domain.Managing
 {
