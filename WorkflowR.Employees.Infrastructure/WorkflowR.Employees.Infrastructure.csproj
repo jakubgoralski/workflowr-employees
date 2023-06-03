@@ -18,11 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WorkflowR.Employees.Application\WorkflowR.Employees.Application.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
+    <ProjectReference Include="..\WorkflowR.Employees.Domain\WorkflowR.Employees.Domain.csproj" />
   </ItemGroup>
   
 </Project>
