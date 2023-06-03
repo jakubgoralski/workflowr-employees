@@ -6,6 +6,7 @@ using WorkflowR.Employees.Infrastructure.EF.Repositories.Interfaces;
 using WorkflowR.Workflows.Infrastructure.EF.Repositories;
 using WorkflowR.Employees.Infrastructure.EF.Repositories;
 using Microsoft.EntityFrameworkCore;
+using WorkflowR.Employees.Domain.Managing;
 
 namespace WorkflowR.Employees.Infrastructure.IoC
 {
